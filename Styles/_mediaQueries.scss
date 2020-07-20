@@ -1,0 +1,15 @@
+@media screen and (max-width: 780px) {
+  .header {
+    &-nav {
+      &-link {
+        display: none;
+      }
+    }
+
+    &-sidebar {
+      &--toggle {
+        display: inline-block;
+      }
+    }
+  }
+}
