@@ -5,9 +5,28 @@
         display: none;
       }
     }
+  }
 
-    &-sidebar {
+  .sidebar {
+    &-link {
       &--toggle {
+        display: inline-block;
+      }
+    }
+  }
+
+  .banner {
+    &-content {
+      font-size: 0.9em;
+      margin-top: 15%;
+    }
+
+    &-2-col-left {
+      width: 100%;
+    }
+
+    &-mobile {
+      &-img {
         display: inline-block;
       }
     }
