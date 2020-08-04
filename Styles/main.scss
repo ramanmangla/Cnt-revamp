@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+//
+// Header
+//
+
 .header {
   position: fixed;
   top: 0;
@@ -38,6 +42,7 @@ a {
   justify-content: center;
   align-items: center;
   background: $matt-black;
+  transition: 0.5s ease;
 
   &-wrapper {
     width: 100%;
@@ -97,7 +102,20 @@ a {
       }
     }
   }
+
+  &--shadow {
+    box-shadow: 0px -3px 14px 0px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid $dark-grey;
+  }
+
+  &--hide {
+    top: -100px;
+  }
 }
+
+//
+// Sidebar
+//
 
 .sidebar {
   width: 220px;
@@ -166,6 +184,10 @@ a {
   }
 }
 
+//
+// Base
+//
+
 .wrapper {
   width: 100%;
   min-height: 100vh;
@@ -189,23 +211,36 @@ a {
 
 .button-link {
   border: 2px solid $red;
-  padding: 0.7em 1em;
+  padding: 0.7rem 1rem;
   border-radius: 30px;
   font-family: "Roboto", sans-serif;
-  font-size: 1.05em;
+  font-size: 1.05rem;
   font-weight: 300;
   color: $white;
   transition: 0.4s ease;
+  line-height: 100%;
 
   &:hover {
     color: $blue;
   }
 }
 
+.text-blue {
+  color: $blue;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+//
+// Banner
+//
+
 .banner {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 
   &-2-col-left {
     position: relative;
@@ -289,6 +324,171 @@ a {
       color: $light-grey;
       margin-top: 1em;
       margin-bottom: 1.8em;
+    }
+  }
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  // May need left and transform
+  margin: auto;
+  padding-left: 4%;
+  padding-right: 4%;
+  background: $matt-black;
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    margin: 5em 0;
+
+    &-title {
+      font-size: 2.3em;
+      color: $white;
+      font-weight: 500;
+    }
+
+    &-desc {
+      font-size: 1.1em;
+      color: $light-grey;
+      font-weight: 300;
+      margin-top: 1em;
+    }
+  }
+
+  &-content {
+    width: 100%;
+    color: $white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    line-height: 170%;
+
+    &-2col {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      text-align: justify;
+      margin-bottom: 3.5em;
+
+      &-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        font-size: 1em;
+      }
+
+      &-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+    }
+  }
+}
+
+.infogrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  position: relative;
+  grid-gap: 2px 2px;
+  box-shadow: 0px -3px 14px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid $dark-grey;
+  border-radius: 8px;
+  padding: 0.6em;
+
+  &-tab {
+    position: relative;
+    display: flex;
+    // width: 100%;
+    // height: 100%;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding: 1.2em 1.9em;
+
+    &-title {
+      font-weight: 500;
+      font-size: 2.6em;
+      color: $blue;
+    }
+
+    &-desc {
+      font-weight: 300;
+      font-size: 1em;
+      color: $light-grey;
+      text-align: center;
+      line-height: 120%;
+      margin-top: 1em;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: $dark-grey;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  &:before {
+    content: "";
+    display: table;
+    position: absolute;
+    height: 93%;
+    width: 1px;
+    background: $dark-grey;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.award-deck {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0.6em;
+
+  &-img {
+    width: 75%;
+  }
+}
+
+.goalslist {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: $blue;
+
+  li {
+    margin: 0.7em;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &-img {
+      height: 1.6em;
+      margin-right: 0.8em;
     }
   }
 }

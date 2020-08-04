@@ -1,4 +1,4 @@
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 820px) {
   .header {
     &-nav {
       &-link {
@@ -29,6 +29,22 @@
       &-img {
         display: inline-block;
       }
+    }
+  }
+
+  .page-content-2col {
+    flex-direction: column;
+
+    &-left {
+      width: 80%;
+    }
+
+    &-right {
+      margin-top: 3em;
+    }
+
+    &--reverse {
+      flex-direction: column-reverse;
     }
   }
 }
