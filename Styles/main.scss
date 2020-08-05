@@ -405,7 +405,7 @@ a {
   grid-gap: 2px 2px;
   box-shadow: 0px -3px 14px 0px rgba(0, 0, 0, 0.5);
   border: 1px solid $dark-grey;
-  border-radius: 8px;
+  border-radius: 7px;
   padding: 0.6em;
 
   &-tab {
@@ -490,6 +490,68 @@ a {
       height: 1.6em;
       margin-right: 0.8em;
     }
+  }
+}
+
+.service-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  position: relative;
+  grid-gap: 80px 80px;
+  padding: 2% 4%;
+
+  &-child {
+    position: relative;
+    border: 1px solid #112c4c;
+    width: 100%;
+    // height: 325px;
+    // min-height: 200px;
+    // margin: auto;
+    padding: 32px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: $matt-black;
+    border: 1px solid $dark-grey;
+    border-radius: 6px;
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.service {
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &-img {
+      width: 32px;
+    }
+
+    &-title {
+      font-size: 1.25em;
+      font-weight: 500;
+      color: $blue;
+    }
+  }
+
+  &-desc {
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: justify;
+    line-height: 160%;
+    margin-top: 2.3em;
+  }
+
+  .button-link {
+    font-size: 0.9em;
+    padding: 0.6rem 0.9rem;
+    align-self: flex-end;
+    margin-top: 1.5em;
   }
 }
 
