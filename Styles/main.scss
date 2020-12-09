@@ -10,7 +10,7 @@ $red: #ff2d2d;
 
 html {
   /* Fluid typography scaling over responsive */
-  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(15px + (18 - 15) * ((100vw - 300px) / (1600 - 300)));
 }
 
 body {
@@ -193,6 +193,7 @@ a {
   min-height: 100vh;
   background: $matt-black;
   overflow-x: hidden;
+  position: relative;
 }
 
 .text-white-underline {
@@ -338,6 +339,7 @@ a {
   margin: auto;
   padding-left: 4%;
   padding-right: 4%;
+  padding-bottom: 3%;
   background: $matt-black;
 
   &-header {
@@ -359,7 +361,7 @@ a {
       font-size: 1.1em;
       color: $light-grey;
       font-weight: 300;
-      margin-top: 1em;
+      margin-top: 1.2em;
     }
   }
 
@@ -369,6 +371,8 @@ a {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     line-height: 170%;
+    position: relative;
+    z-index: 5;
 
     &-2col {
       width: 100%;
@@ -552,6 +556,313 @@ a {
     padding: 0.6rem 0.9rem;
     align-self: flex-end;
     margin-top: 1.5em;
+  }
+}
+
+.customer-para-col {
+  padding: 2em;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.customergrid-container {
+  width: 85%;
+  max-width: 550px;
+  background: $matt-black;
+  border: 1px solid $dark-grey;
+  border-radius: 7px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.15);
+}
+
+.disable-scrollbars {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+// .disable-scrollbars::-webkit-scrollbar {
+//   background: transparent; /* Chrome/Safari/Webkit */
+//   width: 0px;
+// }
+
+.customergrid-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid $dark-grey;
+
+  nav {
+    // padding: 1% 0;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 0.95em;
+    overflow-x: scroll;
+    position: relative;
+
+    a {
+      position: relative;
+      transition: 0.6s ease;
+      margin: 0.2em 0.6em;
+      white-space: nowrap;
+      color: $blue;
+
+      &:visited {
+        color: $blue;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}
+
+.menuButton {
+  height: 1.7em;
+  padding: 0 0.3em;
+  color: $dark-grey;
+  font-weight: 300;
+  font-size: 1.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#menuLeftButton {
+  border-right: 1px solid $dark-grey;
+}
+
+#menuRightButton {
+  border-left: 1px solid $dark-grey;
+}
+
+.activeIndustry {
+  color: $red !important;
+}
+
+.fix-collapse:after {
+  position: relative;
+  content: "";
+  padding-right: 1px;
+}
+
+.customergrid {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 5% 0;
+}
+
+.industryBox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px 40px;
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  margin: 1%;
+  overflow-y: hidden;
+
+  div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 55%;
+    }
+  }
+}
+
+// .customergrid-menu {
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   flex-wrap: wrap;
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 300;
+//   font-size: 0.98em;
+//   color: $blue;
+//   border-bottom: 1px solid $dark-grey;
+//   padding-bottom: 2%;
+
+//   a {
+//     transition: 0.6s ease;
+//     margin: 0.2em 0.6em;
+
+//     &:visited {
+//       color: $blue;
+//     }
+
+//     &:hover {
+//       color: $red;
+//     }
+//   }
+// }
+
+// .customer-type {
+//   background: $matt-black;
+//   border: 1px solid $dark-grey;
+//   border-radius: 7px;
+//   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.15);
+//   padding: 4% 6%;
+//   align-self: flex-start;
+//   margin: 2em 1em;
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 400;
+//   color: $blue;
+//   font-size: 1.1em;
+//   // display: flex;
+//   // width: 70%;
+
+//   ul {
+//     display: grid;
+//     grid-gap: 15px 30px;
+//     grid-template-columns: 1fr 1fr;
+//   }
+
+//   li {
+//     margin: 0.2em 0;
+//     text-align: center;
+//   }
+
+//   &-red {
+//     color: $red;
+//   }
+// }
+
+.contact {
+  .banner-content-heading {
+    color: $white;
+    line-height: 110%;
+    font-size: 2.2em;
+  }
+
+  .page-content-2col-left {
+    align-self: flex-start;
+    margin-top: 6em;
+  }
+
+  &-form {
+    // height: 450px;
+    width: 80%;
+    max-width: 375px;
+    background: $matt-black;
+    border: 1px solid $dark-grey;
+    border-radius: 7px;
+    padding: 7% 5%;
+    font-size: 1.05em;
+
+    .text-white-underline {
+      // color: $blue;
+
+      &:after {
+        width: 120%;
+      }
+    }
+
+    &-heading {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      color: $blue;
+      margin-bottom: 4%;
+    }
+
+    &-info {
+      display: flex;
+      font-size: 0.85em;
+      line-height: 160%;
+      align-items: center;
+      justify-content: space-between;
+
+      ul {
+        margin: 7% 0;
+
+        a {
+          color: $white;
+        }
+
+        h4 {
+          color: $blue;
+        }
+      }
+    }
+  }
+}
+
+.linkedin-icon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h4 {
+    color: $blue;
+    line-height: 130%;
+    font-weight: 400;
+    font-size: 1.1em;
+  }
+
+  img {
+    margin-top: 0.9em;
+    width: 41px;
+  }
+}
+
+.background-bluediv {
+  width: 100%;
+  height: 35vh;
+  background: $blue;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.92em;
+  font-weight: 300;
+  // padding: 1em;
+
+  // p {
+  //   position: relative;
+  // }
+
+  // p:before {
+  //   position: relative;
+  //   left: -5%;
+  //   width: 110%;
+  //   height: 2px;
+  //   margin-bottom: 0.9em;
+  //   background: $matt-black;
+  //   display: table;
+  //   content: "";
+  // }
+  div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $dark-grey;
+    height: 18%;
+    color: #cccccc;
   }
 }
 

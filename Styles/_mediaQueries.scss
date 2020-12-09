@@ -41,10 +41,42 @@
 
     &-right {
       margin-top: 3em;
+      width: 100%;
+      margin-bottom: 3em;
     }
 
     &--reverse {
       flex-direction: column-reverse;
     }
+  }
+
+  .contact {
+    .page-content-2col-left {
+      align-self: center;
+      margin-top: 0;
+    }
+  }
+
+  .customer-para-col {
+    padding: 0;
+  }
+
+  .customer-type {
+    align-self: center;
+
+    ul {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    // flex-direction: column;
+    // padding: 1%;
+
+    // ul {
+    //   display: flex;
+    //   margin: 0 0.3em;
+    // }
+
+    // li {
+    //   margin: 0.5em 0.5em;
+    // }
   }
 }

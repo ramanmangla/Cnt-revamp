@@ -74,9 +74,87 @@ $(".header-nav-link").on("click", function (e) {
   e.preventDefault();
 });
 
-display: grid;
-//   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-//   justify-items: center;
-//   align-items: center;
-//   grid-gap: 30px;
-//   row-gap: 35px;
+$(".scroll-link").on("click", function (e) {
+  var targetHref = $(this).attr("href");
+  // var offset = 0;
+  // offset = targetHref == '#Projects' ? -40 : 0;
+
+  $("html, body").animate(
+    {
+      scrollTop: $(targetHref).offset().top - 0,
+    },
+    1000
+  );
+
+  e.preventDefault();
+});
+
+
+// Current active industry
+var indTargetID = $("#firstItem");
+
+// Industry Menu navigation
+$(".customergrid-menu nav a").on("click", function (e) {
+  e.preventDefault();
+
+  $(indTargetID).removeClass("activeIndustry");
+
+  indTargetID = $(this);
+
+  $(indTargetID).addClass("activeIndustry");
+
+  // Ensure job link is within nav and not on edge
+  $(".customergrid-menu nav").animate(
+    {
+      scrollLeft:
+        $(".customergrid-menu nav").scrollLeft() + indTargetID.position().left,
+    },
+    600
+  );
+
+  $(".customergrid").animate(
+    {
+      scrollLeft:
+        $(".customergrid").scrollLeft() +
+        $(indTargetID.attr("href")).position().left,
+    },
+    600
+  );
+});
+
+// Ensure the same experience/nav link is in view on resize
+$(window).resize(function () {
+  var container = $(".customergrid");
+
+  container.scrollLeft(
+    container.scrollLeft() + $(indTargetID.attr("href")).position().left
+  );
+
+  var industryNav = $(".customergrid-menu nav");
+  
+  industryNav.scrollLeft(industryNav.scrollLeft() + indTargetID.position().left);
+});
+
+
+// Scroll Buttons for Experiences Nav
+$("#menuLeftButton").on("click", function (e) {
+  var expNav = $(".customergrid-menu nav");
+
+  expNav.animate(
+    {
+      scrollLeft: expNav.scrollLeft() - (3 * expNav.width()) / 5,
+    },
+    450
+  );
+});
+
+$("#menuRightButton").on("click", function (e) {
+  var expNav = $(".customergrid-menu nav");
+
+  expNav.animate(
+    {
+      scrollLeft: expNav.scrollLeft() + (3 * expNav.width()) / 5,
+    },
+    450
+  );
+});
