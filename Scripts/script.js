@@ -43,7 +43,7 @@ $("#closeNavIcon").on("click", function () {
   sidebar.removeClass("sidebar--open");
 });
 
-// Smooth Scroll
+// Smooth Scroll on nav click
 $(".sidebar-link").on("click", function (e) {
   var targetHref = $(this).attr("href");
   // var offset = 0;
@@ -90,7 +90,7 @@ $(".scroll-link").on("click", function (e) {
 });
 
 
-// Current active industry
+// Current active industry on customers page
 var indTargetID = $("#firstItem");
 
 // Industry Menu navigation
@@ -157,4 +157,23 @@ $("#menuRightButton").on("click", function (e) {
     },
     450
   );
+});
+
+// Dynamic active nav and sidebar link based on scroll position
+$(window).scroll(function() {
+  var windowScrollPos = $(window).scrollTop();
+  var sectionList = $("section");
+
+  sectionList.each(function() {
+    var targetID = $(this).attr("id");
+    var sectionTop =  $(this).offset().top - 25;
+
+    if (sectionTop < windowScrollPos && sectionTop + $(this).height() > windowScrollPos) {
+      $(".header-nav a[href='#" + targetID +"']").addClass("activeNavLink");
+      $(".sidebar-container a[href='#" + targetID +"']").addClass("activeNavLink");
+    } else {
+      $(".header-nav a[href='#" + targetID +"']").removeClass("activeNavLink");
+      $(".sidebar-container a[href='#" + targetID +"']").removeClass("activeNavLink");
+    }
+  });
 });

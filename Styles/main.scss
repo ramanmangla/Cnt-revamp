@@ -189,6 +189,7 @@ a {
 //
 
 .wrapper {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   background: $matt-black;
@@ -242,6 +243,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  position: relative;
 
   &-2-col-left {
     position: relative;
@@ -749,15 +751,19 @@ a {
     font-size: 2.2em;
   }
 
+  .page-content-2col {
+    margin-bottom: 5em;
+  }
+
   .page-content-2col-left {
     align-self: flex-start;
-    margin-top: 6em;
+    margin-top: 5em;
   }
 
   &-form {
     // height: 450px;
     width: 80%;
-    max-width: 375px;
+    max-width: 360px;
     background: $matt-black;
     border: 1px solid $dark-grey;
     border-radius: 7px;
@@ -864,6 +870,10 @@ footer {
     height: 18%;
     color: #cccccc;
   }
+}
+
+.activeNavLink {
+  color: $blue;
 }
 
 @import "mediaQueries";
