@@ -167,7 +167,7 @@ a {
     color: $white;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-    font-size: 0.9em;
+    font-size: 1em;
     transition: 0.4s ease;
 
     &:visited {
@@ -686,64 +686,6 @@ a {
   }
 }
 
-// .customergrid-menu {
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-evenly;
-//   align-items: center;
-//   flex-wrap: wrap;
-//   font-family: "Roboto", sans-serif;
-//   font-weight: 300;
-//   font-size: 0.98em;
-//   color: $blue;
-//   border-bottom: 1px solid $dark-grey;
-//   padding-bottom: 2%;
-
-//   a {
-//     transition: 0.6s ease;
-//     margin: 0.2em 0.6em;
-
-//     &:visited {
-//       color: $blue;
-//     }
-
-//     &:hover {
-//       color: $red;
-//     }
-//   }
-// }
-
-// .customer-type {
-//   background: $matt-black;
-//   border: 1px solid $dark-grey;
-//   border-radius: 7px;
-//   box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.15);
-//   padding: 4% 6%;
-//   align-self: flex-start;
-//   margin: 2em 1em;
-//   font-family: "Roboto", sans-serif;
-//   font-weight: 400;
-//   color: $blue;
-//   font-size: 1.1em;
-//   // display: flex;
-//   // width: 70%;
-
-//   ul {
-//     display: grid;
-//     grid-gap: 15px 30px;
-//     grid-template-columns: 1fr 1fr;
-//   }
-
-//   li {
-//     margin: 0.2em 0;
-//     text-align: center;
-//   }
-
-//   &-red {
-//     color: $red;
-//   }
-// }
-
 .contact {
   .banner-content-heading {
     color: $white;
@@ -807,7 +749,7 @@ a {
   }
 }
 
-.linkedin-icon {
+.contact-icon {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -822,7 +764,7 @@ a {
   }
 
   img {
-    margin-top: 0.9em;
+    margin-top: 0.7em;
     width: 41px;
   }
 }
@@ -845,35 +787,40 @@ footer {
   align-items: center;
   font-size: 0.92em;
   font-weight: 300;
-  // padding: 1em;
+}
 
-  // p {
-  //   position: relative;
-  // }
+.copyright-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $dark-grey;
+  height: 43px;
+  color: #cccccc;
 
-  // p:before {
-  //   position: relative;
-  //   left: -5%;
-  //   width: 110%;
-  //   height: 2px;
-  //   margin-bottom: 0.9em;
-  //   background: $matt-black;
-  //   display: table;
-  //   content: "";
-  // }
-  div {
+  &:before {
+    display: table;
+    content: "";
+    height: 58px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $dark-grey;
-    height: 18%;
-    color: #cccccc;
+    background: $blue;
+    position: absolute;
+    top: -58px;
   }
 }
 
-.activeNavLink {
-  color: $blue;
+.careers-footer {
+  margin-top: 4em;
 }
 
+/* *****************
+ *  Misc.
+ *******************/
+
+.activeNavLink {
+  color: $blue !important;
+}
+
+@import "careers";
+@import "underwork";
 @import "mediaQueries";
