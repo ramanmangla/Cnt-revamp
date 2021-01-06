@@ -18,7 +18,8 @@
   .banner {
     &-content {
       font-size: 0.9em;
-      margin-top: 15%;
+      margin-top: 7%;
+      max-width: 80%;
     }
 
     &-2-col-left {
@@ -27,7 +28,7 @@
 
     &-mobile {
       &-img {
-        display: inline-block;
+        display: flex;
       }
     }
   }
@@ -36,7 +37,7 @@
     flex-direction: column;
 
     &-left {
-      width: 80%;
+      width: 90%;
     }
 
     &-right {
@@ -57,7 +58,9 @@
     }
 
     &-form {
-      max-width: 320px;
+      max-width: 340px;
+      width: 85%;
+      padding: 7%;
     }
   }
 
@@ -94,5 +97,32 @@
 
   .careers-footer {
     margin-top: 2em;
+  }
+
+  .page-header {
+    margin-top: 3em;
+    margin-bottom: 4em;
+  }
+
+  .service-grid {
+    grid-gap: 30px;
+
+    &-child {
+      padding: 25px 20px;
+    }
+  }
+
+  .customergrid-container {
+    width: 90%;
+  }
+
+  .contact-content-heading {
+    font-size: 1.9em !important;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
+    grid-gap: 40px;
+    padding: 7%;
   }
 }

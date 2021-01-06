@@ -177,3 +177,25 @@ $(window).scroll(function() {
     }
   });
 });
+
+// $(".box-title").click(function() {
+//   $(this).siblings().toggleClass("show-box-desc");
+// });
+
+var currentJob = null;
+
+$(".box-title").click(function() {
+  if (currentJob != null) {
+    currentJob.siblings().removeClass("show-box-desc");
+    
+    if (!currentJob.is($(this))) {
+      $(this).siblings().addClass("show-box-desc");
+      currentJob = $(this);
+    } else {
+      currentJob = null;
+    }
+  } else {
+    $(this).siblings().addClass("show-box-desc");
+    currentJob = $(this);
+  }
+});

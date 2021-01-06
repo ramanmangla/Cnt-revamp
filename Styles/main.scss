@@ -55,6 +55,14 @@ a {
     margin: 10px;
     width: 3.8em;
 
+    // font-size: 1.7em;
+    // font-family: Raleway;
+    // font-weight: 700;
+
+    a {
+      color: #41aceb;
+    }
+
     &-image {
       width: 100%;
     }
@@ -204,7 +212,7 @@ a {
   &:after {
     width: 100%;
     height: 5px;
-    margin-top: 0.4em;
+    margin-top: 0.3em;
     background: $red;
     display: table;
     content: "";
@@ -216,7 +224,7 @@ a {
   padding: 0.7rem 1rem;
   border-radius: 30px;
   font-family: "Roboto", sans-serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 300;
   color: $white;
   transition: 0.4s ease;
@@ -290,14 +298,24 @@ a {
   &-img {
     width: 60%;
     margin-left: 10%;
+    margin-top: 10%;
   }
 
   &-mobile {
     &-img {
-      width: 280px;
-      margin-top: 3em;
+      width: 100%;
+      margin-top: 1.4em;
       align-self: center;
       display: none;
+      // background: $white;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+
+      img {
+        margin: 1.5em 0;
+        width: 80%;
+      }
     }
   }
 
@@ -308,24 +326,31 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    max-width: 450px;
     // margin: 10%;
     // margin-right: 20%;
 
     &-heading {
       font-family: "Roboto", sans-serif;
       font-weight: 500;
-      font-size: 2.6em;
+      font-size: 2.5em;
       white-space: nowrap;
       color: $blue;
+    }
+
+    &-subheading {
+      font-size: 1.47em;
+      margin-bottom: 0.7em;
+      color: #20bcff;
     }
 
     &-desc {
       font-family: "Roboto", sans-serif;
       font-weight: 300;
-      font-size: 1.23em;
-      line-height: 135%;
+      font-size: 1.15em;
+      line-height: 150%;
       color: $light-grey;
-      margin-top: 1em;
+      margin-top: 1.4em;
       margin-bottom: 1.8em;
     }
   }
@@ -412,7 +437,7 @@ a {
   box-shadow: 0px -3px 14px 0px rgba(0, 0, 0, 0.5);
   border: 1px solid $dark-grey;
   border-radius: 7px;
-  padding: 0.6em;
+  // padding: 0.6em;
 
   &-tab {
     position: relative;
@@ -423,11 +448,13 @@ a {
     // justify-content: center;
     align-items: center;
     padding: 1.2em 1.9em;
+    margin: 0.4em;
 
     &-title {
       font-weight: 500;
-      font-size: 2.6em;
+      font-size: 2.4em;
       color: $blue;
+      margin-top: 0.2em;
     }
 
     &-desc {
@@ -456,7 +483,7 @@ a {
     content: "";
     display: table;
     position: absolute;
-    height: 93%;
+    height: 100.3%;
     width: 1px;
     background: $dark-grey;
     top: 0;
@@ -472,9 +499,10 @@ a {
   align-items: center;
   position: relative;
   padding: 0.6em;
+  margin-bottom: 2em;
 
   &-img {
-    width: 75%;
+    width: 72%;
   }
 }
 
@@ -491,9 +519,10 @@ a {
     display: flex;
     align-items: center;
     white-space: nowrap;
+    margin: 1em 0;
 
     &-img {
-      height: 1.6em;
+      width: 2em;
       margin-right: 0.8em;
     }
   }
@@ -534,11 +563,11 @@ a {
     width: 100%;
 
     &-img {
-      width: 32px;
+      width: 31px;
     }
 
     &-title {
-      font-size: 1.25em;
+      font-size: 1.21em;
       font-weight: 500;
       color: $blue;
     }
@@ -550,14 +579,14 @@ a {
     font-weight: 300;
     text-align: justify;
     line-height: 160%;
-    margin-top: 2.3em;
+    margin-top: 2em;
   }
 
   .button-link {
     font-size: 0.9em;
     padding: 0.6rem 0.9rem;
     align-self: flex-end;
-    margin-top: 1.5em;
+    margin-top: 1.3em;
   }
 }
 
@@ -686,6 +715,24 @@ a {
   }
 }
 
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(57px, 1fr));
+  position: relative;
+  grid-gap: 60px;
+  padding: 3% 4%;
+  background: #1b1b1b;
+  border: 1px solid #444444;
+  border-radius: 7px;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.15);
+  // width: 100%;
+  margin: 6%;
+
+  img {
+    width: 100%;
+  }
+}
+
 .contact {
   .banner-content-heading {
     color: $white;
@@ -709,7 +756,7 @@ a {
     background: $matt-black;
     border: 1px solid $dark-grey;
     border-radius: 7px;
-    padding: 7% 5%;
+    padding: 6% 5%;
     font-size: 1.05em;
 
     .text-white-underline {
@@ -747,6 +794,10 @@ a {
       }
     }
   }
+}
+
+.last-list {
+  margin-bottom: 0 !important;
 }
 
 .contact-icon {
