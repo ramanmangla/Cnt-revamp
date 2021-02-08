@@ -108,7 +108,7 @@
   font-weight: 400;
 
   h3 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 0.3em;
     color: $blue;
   }
@@ -135,4 +135,15 @@
 
 .remove-border {
   border: 0;
+}
+
+.no-jobs-box {
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > h4 {
+    font-size: 1em;
+  }
 }

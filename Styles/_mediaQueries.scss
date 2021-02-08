@@ -100,7 +100,7 @@
   }
 
   .page-header {
-    margin-top: 3em;
+    // margin-top: 3em;
     margin-bottom: 4em;
   }
 
@@ -121,8 +121,40 @@
   }
 
   .partners-grid {
-    grid-template-columns: repeat(auto-fill, minmax(48px, 1fr));
-    grid-gap: 40px;
-    padding: 7%;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-gap: 29px;
+    padding: 5%;
+  }
+
+  #Customers {
+    .partners-grid {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .page-content-2col-left {
+    width: 95%;
+  }
+
+  .service-grid {
+    padding: 2%;
+  }
+
+  .customergrid-container {
+    width: 95%;
+  }
+
+  .partners-grid {
+    margin: 3%;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+
+  .banner-content {
+    max-width: 77%;
   }
 }
