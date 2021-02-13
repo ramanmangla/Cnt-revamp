@@ -182,7 +182,7 @@ a {
 }
 .header-logo {
   margin: 10px;
-  width: 3.8em;
+  width: 4.3em;
 }
 .header-logo a {
   color: #41aceb;
@@ -1035,6 +1035,26 @@ footer {
 }
 .no-jobs-box > h4 {
   font-size: 1em;
+}
+
+#careers-contact-link1 {
+  color: #ffffff;
+}
+#careers-contact-link1:visited {
+  color: #ffffff;
+}
+#careers-contact-link1:hover {
+  color: #ccc;
+}
+
+#careers-contact-link2 {
+  color: #20bcff;
+}
+#careers-contact-link2:visited {
+  color: #20bcff;
+}
+#careers-contact-link2:hover {
+  color: #ccc;
 }
 
 .center-text {

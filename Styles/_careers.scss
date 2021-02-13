@@ -147,3 +147,27 @@
     font-size: 1em;
   }
 }
+
+#careers-contact-link1 {
+  color: #ffffff;
+
+  &:visited {
+    color: #ffffff;
+  }
+
+  &:hover {
+    color: #ccc;
+  }
+}
+
+#careers-contact-link2 {
+  color: $blue;
+
+  &:visited {
+    color: $blue;
+  }
+
+  &:hover {
+    color: #ccc;
+  }
+}

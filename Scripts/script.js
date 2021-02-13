@@ -91,73 +91,73 @@ $(".scroll-link").on("click", function (e) {
 
 
 // Current active industry on customers page
-var indTargetID = $("#firstItem");
+// var indTargetID = $("#firstItem");
 
-// Industry Menu navigation
-$(".customergrid-menu nav a").on("click", function (e) {
-  e.preventDefault();
+// // Industry Menu navigation
+// $(".customergrid-menu nav a").on("click", function (e) {
+//   e.preventDefault();
 
-  $(indTargetID).removeClass("activeIndustry");
+//   $(indTargetID).removeClass("activeIndustry");
 
-  indTargetID = $(this);
+//   indTargetID = $(this);
 
-  $(indTargetID).addClass("activeIndustry");
+//   $(indTargetID).addClass("activeIndustry");
 
-  // Ensure job link is within nav and not on edge
-  $(".customergrid-menu nav").animate(
-    {
-      scrollLeft:
-        $(".customergrid-menu nav").scrollLeft() + indTargetID.position().left,
-    },
-    600
-  );
+//   // Ensure job link is within nav and not on edge
+//   $(".customergrid-menu nav").animate(
+//     {
+//       scrollLeft:
+//         $(".customergrid-menu nav").scrollLeft() + indTargetID.position().left,
+//     },
+//     600
+//   );
 
-  $(".customergrid").animate(
-    {
-      scrollLeft:
-        $(".customergrid").scrollLeft() +
-        $(indTargetID.attr("href")).position().left,
-    },
-    600
-  );
-});
+//   $(".customergrid").animate(
+//     {
+//       scrollLeft:
+//         $(".customergrid").scrollLeft() +
+//         $(indTargetID.attr("href")).position().left,
+//     },
+//     600
+//   );
+// });
 
-// Ensure the same experience/nav link is in view on resize
-$(window).resize(function () {
-  var container = $(".customergrid");
+// // Ensure the same experience/nav link is in view on resize
+// $(window).resize(function () {
+//   var container = $(".customergrid");
 
-  container.scrollLeft(
-    container.scrollLeft() + $(indTargetID.attr("href")).position().left
-  );
+//   container.scrollLeft(
+//     container.scrollLeft() + $(indTargetID.attr("href")).position().left
+//   );
 
-  var industryNav = $(".customergrid-menu nav");
+//   var industryNav = $(".customergrid-menu nav");
   
-  industryNav.scrollLeft(industryNav.scrollLeft() + indTargetID.position().left);
-});
+//   industryNav.scrollLeft(industryNav.scrollLeft() + indTargetID.position().left);
+// });
 
 
-// Scroll Buttons for Experiences Nav
-$("#menuLeftButton").on("click", function (e) {
-  var expNav = $(".customergrid-menu nav");
+// // Scroll Buttons for Experiences Nav
+// $("#menuLeftButton").on("click", function (e) {
+//   var expNav = $(".customergrid-menu nav");
 
-  expNav.animate(
-    {
-      scrollLeft: expNav.scrollLeft() - (3 * expNav.width()) / 5,
-    },
-    450
-  );
-});
+//   expNav.animate(
+//     {
+//       scrollLeft: expNav.scrollLeft() - (3 * expNav.width()) / 5,
+//     },
+//     450
+//   );
+// });
 
-$("#menuRightButton").on("click", function (e) {
-  var expNav = $(".customergrid-menu nav");
+// $("#menuRightButton").on("click", function (e) {
+//   var expNav = $(".customergrid-menu nav");
 
-  expNav.animate(
-    {
-      scrollLeft: expNav.scrollLeft() + (3 * expNav.width()) / 5,
-    },
-    450
-  );
-});
+//   expNav.animate(
+//     {
+//       scrollLeft: expNav.scrollLeft() + (3 * expNav.width()) / 5,
+//     },
+//     450
+//   );
+// });
 
 // Dynamic active nav and sidebar link based on scroll position
 $(window).scroll(function() {
