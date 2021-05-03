@@ -43,7 +43,7 @@
     &-right {
       margin-top: 3em;
       width: 100%;
-      margin-bottom: 3em;
+      // margin-bottom: 3em;
     }
 
     &--reverse {
@@ -58,9 +58,9 @@
     }
 
     &-form {
-      max-width: 340px;
-      width: 85%;
-      padding: 7%;
+      max-width: 360px;
+      width: 90%;
+      padding: 6%;
     }
   }
 
@@ -117,7 +117,7 @@
   }
 
   .contact-content-heading {
-    font-size: 1.9em !important;
+    font-size: 1.8em !important;
   }
 
   .partners-grid {
@@ -129,6 +129,56 @@
   #Customers {
     .partners-grid {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .remove-bottom-margin-resp {
+    margin-bottom: 0;
+  }
+
+  .page {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .banner-content-desc {
+    // font-size: 1.05em;
+  }
+
+  .banner-content-heading {
+    font-size: 2.3em;
+  }
+
+  .button-link {
+    font-size: 0.93rem;
+  }
+
+  .goalslist {
+    font-size: 1.3em;
+
+    &-item {
+      margin: 0.8em 0;
+
+      &-img {
+        width: 1.5em;
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  .service-desc {
+    font-size: 0.95em;
+  }
+
+  .page-header {
+    &-title {
+      font-size: 2.1em;
+    }
+
+    &-desc {
+      font-size: 1.05em;
     }
   }
 }
