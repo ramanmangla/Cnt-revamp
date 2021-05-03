@@ -786,7 +786,7 @@ a {
 }
 .contact-form {
   width: 80%;
-  max-width: 360px;
+  max-width: 380px;
   background: #1b1b1b;
   border: 1px solid #444444;
   border-radius: 7px;
@@ -794,7 +794,7 @@ a {
   font-size: 1.1em;
 }
 .contact-form .text-white-underline:after {
-  width: 120%;
+  width: 105%;
 }
 .contact-form-heading {
   font-family: "Roboto", sans-serif;
@@ -1209,6 +1209,10 @@ footer {
   }
   .page-header-desc {
     font-size: 1.05em;
+  }
+
+  .contact-form {
+    max-width: 360px;
   }
 }
 @media screen and (max-width: 390px) {
