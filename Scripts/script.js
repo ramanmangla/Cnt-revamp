@@ -206,7 +206,7 @@ $(document).ready(function() {
   $(window).scroll( function(){
       /* Check the location of each desired element */
       $('.hide-me-for-fade').each( function(i){
-        var objectTop = $(this).offset().top + 80;
+        var objectTop = $(this).offset().top + 70;
         var windowBottom = $(window).scrollTop() + $(window).height();
         
         /* If the object is completely visible in the window, fade it it */
