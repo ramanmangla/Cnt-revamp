@@ -199,3 +199,27 @@ $(".box-title").click(function() {
     currentJob = $(this);
   }
 });
+
+// Fade In on scroll effect
+$(document).ready(function() {
+  /* Every time the window is scrolled ... */
+  $(window).scroll( function(){
+      /* Check the location of each desired element */
+      $('.hide-me-for-fade').each( function(i){
+        var objectTop = $(this).offset().top + 80;
+        var windowBottom = $(window).scrollTop() + $(window).height();
+        
+        /* If the object is completely visible in the window, fade it it */
+        if(windowBottom > objectTop){
+          $(this).animate({'opacity':'1'}, 400);     
+        }
+      }); 
+  });
+});
+
+window.onbeforeunload = function () {
+  window.scrollTo({
+    top: 0,
+    left: 0
+  });
+};

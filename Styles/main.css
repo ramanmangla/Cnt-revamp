@@ -917,6 +917,10 @@ footer {
   color: #20bcff !important;
 }
 
+.hide-me-for-fade {
+  opacity: 0;
+}
+
 .title-topmargin {
   margin-top: 8em;
   margin-bottom: 3em;
