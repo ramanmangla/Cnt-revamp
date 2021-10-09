@@ -944,6 +944,7 @@ footer {
 
 .container-heading {
   font-size: 1.03em;
+  font-family: "Lato", sans-serif;
   width: 100%;
   border-bottom: 1px solid #444444;
   text-align: center;
@@ -1029,6 +1030,7 @@ footer {
 .careers-text p {
   font-weight: 300;
   line-height: 150%;
+  font-family: "Lato", sans-serif;
 }
 .careers-text p a {
   color: #ff2d2d;
@@ -1051,6 +1053,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Lato", sans-serif;
 }
 .no-jobs-box > h4 {
   font-size: 1em;

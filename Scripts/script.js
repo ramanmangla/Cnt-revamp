@@ -206,20 +206,16 @@ $(document).ready(function() {
   $(window).scroll( function(){
       /* Check the location of each desired element */
       $('.hide-me-for-fade').each( function(i){
-        var objectTop = $(this).offset().top + 70;
+        var objectTop = $(this).offset().top + 50;
         var windowBottom = $(window).scrollTop() + $(window).height();
         
         /* If the object is completely visible in the window, fade it it */
         if(windowBottom > objectTop){
-          $(this).animate({'opacity':'1'}, 400);     
+          $(this).animate({'opacity':'1'}, 500);     
         }
       }); 
   });
 });
 
-window.onbeforeunload = function () {
-  window.scrollTo({
-    top: 0,
-    left: 0
-  });
-};
+// Stop browser from refreshing at current scroll position
+history.scrollRestoration = 'manual';
