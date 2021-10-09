@@ -134,6 +134,14 @@
 }
 
 @media screen and (max-width: 500px) {
+  .header {
+    height: 55px;
+
+    &-logo {
+      width: 4.4em;
+    }
+  }
+
   .remove-bottom-margin-resp {
     margin-bottom: 0;
   }
