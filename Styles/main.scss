@@ -221,10 +221,10 @@ a {
 
 .button-link {
   border: 2px solid $red;
-  padding: 0.7rem 1rem;
+  padding: 0.6rem 0.9rem;
   border-radius: 30px;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 300;
   color: $white;
   transition: 0.4s ease;
@@ -232,6 +232,10 @@ a {
 
   &:hover {
     color: $blue;
+  }
+
+  &-right {
+    margin-left: 1em;
   }
 }
 
@@ -347,12 +351,17 @@ a {
     &-desc {
       font-family: "Roboto", sans-serif;
       font-weight: 300;
-      font-size: 1.15em;
+      font-size: 1.1em;
       line-height: 150%;
       color: $light-grey;
       margin-top: 1.4em;
       margin-bottom: 1.8em;
     }
+  }
+
+  &-button-container {
+    width: 100%;
+    display: flex;
   }
 }
 
