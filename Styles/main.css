@@ -144,7 +144,7 @@ h6 {
 
 html {
   /* Fluid typography scaling over responsive */
-  font-size: calc(17px + (19 - 17) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
 body {
@@ -895,6 +895,7 @@ footer {
   background: #444444;
   height: 43px;
   color: #cccccc;
+  font-size: 0.9em;
 }
 .copyright-div-before:before {
   display: table;
@@ -1024,7 +1025,7 @@ footer {
 }
 .careers-text h3 {
   font-size: 1.1em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.7em;
   color: #19b5fe;
 }
 .careers-text p {
@@ -1155,6 +1156,7 @@ footer {
 
   .careers-text {
     width: 92%;
+    text-align: center;
   }
 
   .careers-footer {

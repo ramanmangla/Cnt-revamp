@@ -201,20 +201,44 @@ $(".box-title").click(function() {
 });
 
 // Fade In on scroll effect
+/* Every time the window is scrolled ... */
+$(window).scroll(function(){
+  /* Check the location of each desired element */
+  $('.hide-me-for-fade').each( function(i){
+    var objectTop = $(this).offset().top + 50;
+    var windowBottom = $(window).scrollTop() + $(window).height();
+    
+    /* If the object is completely visible in the window, fade it it */
+    if(windowBottom > objectTop){
+      $(this).animate({'opacity':'1'}, 500);     
+    }
+  }); 
+});
+
 $(document).ready(function() {
-  /* Every time the window is scrolled ... */
-  $(window).scroll( function(){
-      /* Check the location of each desired element */
-      $('.hide-me-for-fade').each( function(i){
-        var objectTop = $(this).offset().top + 50;
-        var windowBottom = $(window).scrollTop() + $(window).height();
-        
-        /* If the object is completely visible in the window, fade it it */
-        if(windowBottom > objectTop){
-          $(this).animate({'opacity':'1'}, 500);     
-        }
-      }); 
-  });
+
+  // Update Copyright year automatically
+  $("#copyright-text p").html("© " + new Date().getFullYear() +
+    " Computers Network & Telecom India Pvt. Ltd.");
+
+  // Scroll to section link when navigating from another page
+  // Instead of straight away jumping to it or not doing anything
+  // Fixes issue with invisible content due to Fade In on scroll effect
+  // Eg. Careers to Partners section on home page
+  var target = window.location.hash;
+  target = target.replace('#', '');
+
+  // Delete hash so the page won't scroll to it
+  window.location.hash = "";
+
+  if (target.length > 0) {
+    $("html, body").animate(
+      {
+        scrollTop: $("#" + target).offset().top - 0,
+      },
+      1000
+    );
+  }
 });
 
 // Stop browser from refreshing at current scroll position

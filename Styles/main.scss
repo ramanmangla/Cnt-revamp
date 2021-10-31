@@ -10,7 +10,7 @@ $red: #ff2d2d;
 
 html {
   /* Fluid typography scaling over responsive */
-  font-size: calc(17px + (19 - 17) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (1600 - 300)));
 }
 
 body {
@@ -904,6 +904,7 @@ footer {
   background: $dark-grey;
   height: 43px;
   color: #cccccc;
+  font-size: 0.9em;
 
   &-before {
     &:before {
