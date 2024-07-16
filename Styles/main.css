@@ -144,7 +144,7 @@ h6 {
 
 html {
   /* Fluid typography scaling over responsive */
-  font-size: calc(16px + (19 - 16) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(16px + 3 * (100vw - 300px) / 1300);
 }
 
 body {
@@ -815,7 +815,7 @@ a {
 .contact-form-info {
   display: flex;
   flex-direction: column;
-  font-size: 0.85em;
+  font-size: 0.7em;
   line-height: 155%;
   align-items: center;
   justify-content: space-between;
@@ -828,12 +828,15 @@ a {
 .contact-form-info ul {
   margin-top: 7%;
   text-align: left;
+  flex: 1;
+  line-height: 1.6;
 }
 .contact-form-info ul a {
   color: #ffffff;
 }
 .contact-form-info ul h4 {
   color: #19b5fe;
+  font-size: 1.2em;
 }
 .contact-form-info-col {
   display: flex;
@@ -1098,11 +1101,9 @@ footer {
   .header-nav-link {
     display: none;
   }
-
   .sidebar-link--toggle {
     display: inline-block;
   }
-
   .banner-content {
     font-size: 0.9em;
     margin-top: 7%;
@@ -1114,7 +1115,6 @@ footer {
   .banner-mobile-img {
     display: flex;
   }
-
   .page-content-2col {
     flex-direction: column;
   }
@@ -1128,7 +1128,6 @@ footer {
   .page-content-2col--reverse {
     flex-direction: column-reverse;
   }
-
   .contact .page-content-2col-left {
     align-self: center;
     margin-top: 0;
@@ -1138,56 +1137,45 @@ footer {
     width: 90%;
     padding: 6%;
   }
-
   .customer-para-col {
     padding: 0;
   }
-
   .customer-type {
     align-self: center;
   }
   .customer-type ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
   .collapsiblebox-container {
     width: 90%;
   }
-
   .careers-text {
     width: 92%;
     text-align: center;
   }
-
   .careers-footer {
     margin-top: 2em;
   }
-
   .page-header {
     margin-bottom: 4em;
   }
-
   .service-grid {
     grid-gap: 30px;
   }
   .service-grid-child {
     padding: 25px 20px;
   }
-
   .customergrid-container {
     width: 90%;
   }
-
   .contact-content-heading {
     font-size: 1.8em !important;
   }
-
   .partners-grid {
     grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
     grid-gap: 29px;
     padding: 5%;
   }
-
   #Customers .partners-grid {
     width: 100%;
   }
@@ -1199,24 +1187,19 @@ footer {
   .header-logo {
     width: 4.4em;
   }
-
   .remove-bottom-margin-resp {
     margin-bottom: 0;
   }
-
   .page {
     padding-left: 2%;
     padding-right: 2%;
   }
-
   .banner-content-heading {
     font-size: 2.3em;
   }
-
   .button-link {
     font-size: 0.93rem;
   }
-
   .goalslist {
     font-size: 1.3em;
   }
@@ -1227,15 +1210,12 @@ footer {
     width: 1.5em;
     margin-right: 0.5em;
   }
-
   .service-desc {
     margin-top: 1.2em;
   }
-
   .page-header-title {
     font-size: 2.1em;
   }
-
   .contact-form {
     max-width: 360px;
   }
@@ -1244,23 +1224,18 @@ footer {
   .page-content-2col-left {
     width: 95%;
   }
-
   .service-grid {
     padding: 2%;
   }
-
   .customergrid-container {
     width: 95%;
   }
-
   .partners-grid {
     margin: 3%;
   }
-
   .contact-form {
     width: 90%;
   }
-
   .banner-content {
     max-width: 77%;
   }
